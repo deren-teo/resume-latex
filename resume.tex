@@ -1,9 +1,7 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
 %
-% This template has been downloaded from:
+% The original template was downloaded from:
 % http://www.LaTeXTemplates.com
 %
 % Original author:
@@ -11,174 +9,137 @@
 %
 % Important note:
 % This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
+% .tex file. The resume.cls file provides the resume style used for structuring
+% the document.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \documentclass{resume} % Use the custom resume.cls style
 
-% Change the font if you want to
-\usepackage[OT1]{fontenc}
 \usepackage{cmbright}
+\usepackage[T1]{fontenc}
 
 \usepackage[margin=1in]{geometry} % Document margins
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Deren Teo} % Your name
-\address{1007/45 Boundary St, South Brisbane QLD 4101} % Your address
-%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary address (optional)
-\address{(+61) 490 517 568 \\ deren.teo@uqconnect.edu.au} % Your phone number and email
+\renewcommand{\baselinestretch}{1.2}
+
+\name{Deren Teo}
+\address{1007/45 Boundary St, South Brisbane QLD 4101}
+\address{(+61) 490 517 568 \\ linkedin.com/in/derenteo \\ teo.deren@icloud.com}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
 
-{\bf University of Queensland} \hfill {\em Feb 2019 - Dec 2023}
-\\ Bachelor of Engineering (Honours), Mechatronics; and \hfill { GPA : 6.9 / 7}
-\\ Bachelor of Computer Science, Machine Learning
-
-{\bf Brisbane State High School} \hfill {\em 2014 - 2018}
-\\ Secondary Education \hfill { ATAR : 99.65}
+    {\bf University of Queensland} \hfill {\em Feb 2019 - Dec 2023}
+    \\ Bachelor of Engineering (Honours), Mechatronic Engineering; and \hfill { GPA : 6.9 / 7}
+    \\ Bachelor of Computer Science, Machine Learning
 
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \vspace{1em}
-\begin{rSection}{Technical Strengths}
+\begin{rSection}{Skills}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming Languages & Python, Java, C, C++, MATLAB \\
-Technical Skills & Linux, ROS, CAD software, Altium Designer \\
-\end{tabular}
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Programming Languages & Python, Java, C, C++, MATLAB \\
+    Technical Skills & Linux, ROS, CAD software, Altium Designer \\
+    \end{tabular}
 
 \end{rSection}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \vspace{1em}
-\begin{rSection}{Work Experience}
+\begin{rSection}{Experience}
 
-\begin{rSubsection}{Universal Field Robots}{Nov 2022 - Feb 2023}{Robotics Engineer Intern}{}
-\item Liaised with clients in mining automation to identify project direction and requirements
-\item Programmed safety controllers and writing and integrating ROS2 nodes
-\item Integrated quadrature sensors, IMU, LiDAR, radar and GPS using EKF for sensor fusion
-\item Researched and presented to the team on the suitability of LiDAR and radar hardware options
-\end{rSubsection}
+    \begin{rSubsection}{IEEE UQ Student Branch}{Jul 2021 - Nov 2023}{Vice-Chair $\rightarrow$ Chair}{}
+        \item Liaised with academics and industry professionals to organise on-campus events for students
+        \item Built collaborative relationships with other UQ societies to promote IEEE to a diverse audience
+        \item Participated in Qld. Section committee meetings to align goals with the broader IEEE body
+    \end{rSubsection}
 
-%------------------------------------------------
+    \begin{rSubsection}{Synengco}{Nov 2019 - Nov 2023}{Student Software Engineer}{}
+        \item Built and tested Bayesian methods for supply chain modelling and optimisation
+        \item Visualised big data from monitoring of industrial assets
+        \item Developed software aligned with the Open Industrial Interoperability Ecosystem (OIIE)
+        \item Collaborated with major power generation clients to optimise their code base
+    \end{rSubsection}
 
-\begin{rSubsection}{Synengco}{Nov 2019 - Present}{Student Software Engineer}{}
-\item Developed internal capability and working with with clients in mining and power generation
-\item Participated in Agile development of Python and R software using Git workflow
-\item Migrated company code base from Python 2 to Python 3
-\end{rSubsection}
-
-%------------------------------------------------
-
-\begin{rSubsection}{UQ School of ITEE - Artificial Intelligence}{Jul 2019 - Nov 2019}{Research Placement}{}
-\item Placement funded by \textit{ARC Centre of Excellence for the Dynamics of Language}
-\item Researched applications of natural language processing and speech recognition to assist individuals living with dementia
-\item Wrote a paper \textit{On the Feasibility of Using Multiple Modalities of Speech in Automatic Speech Recognition} and presented at an informal student conference
-\end{rSubsection}
+    \begin{rSubsection}{Universal Field Robots}{Nov 2022 - Feb 2023}{Robotics Engineer Intern}{}
+        \item Programmed ROS2 software for communication with hardware using CAN specification
+        \item Tested systems under development in simulation and on real hardware
+        \item Integrated sensors (quadrature, IMU, LiDAR, radar and GPS) using EKF for sensor fusion
+        \item Liaised with clients in mining automation to identify project direction and requirements
+    \end{rSubsection}
 
 \end{rSection}
-
-%	POSITIONS SECTION
-%----------------------------------------------------------------------------------------
-% \vspace{1em}
-% \begin{rSection}{Positions of Responsibility}
-
-% \begin{rSubsection}{Organisation}{Start date - End date}{Position Title}{Subtext}
-%     \item Resposibilities and achievements...
-% \end{rSubsection}
-
-% \end{rSection}
 
 \newpage
 
+%-------------------------------------------------------------------------------
 %	ACADEMICS SECTION
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Academic Achievements} \itemsep -2pt
-\item \textit{2022}
-\begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
-    \item Semester 2 Dean's Commendation for Academic Excellence
-    \item Semester 1 Dean's Commendation for Academic Excellence
-    \item Mechatronic System Design Project II (METR4810) trophy
-\end{list}
+%-------------------------------------------------------------------------------
+\begin{rSection}{Honors \& Awards} \itemsep -2pt
 
-\vspace{1em}
+    \item \textit{2023}
+    \begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
+        \item IEEE Queensland Section Student Thesis Prize --- General Category
+        \item Les Dobson Memorial Prize for Best Systems \& Software Engineering Project (Honours thesis)
+        \item Best Project in Avionics \& UAV (Honours thesis)
+        \item Semester 1 Dean's Commendation for Academic Excellence
+    \end{list}
 
-\item \textit{2021}
-\begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
-    \item Semester 2 Dean's Commendation for Academic Excellence
-    \item Semester 1 Dean's Commendation for Academic Excellence
-    \item Shortlisted for Rio Tinto Excellence Scholarships and Graduate Program
-    \item Shortlisted for L3 Harris Scholarship in Electrical Engineering
-\end{list}
+    \vspace{1em}
 
-\vspace{1em}
+    \item \textit{2022}
+    \begin{list}{$\cdot$}{\leftmargin=1em}
+        \item Semester 2 Dean's Commendation for Academic Excellence
+        \item Semester 1 Dean's Commendation for Academic Excellence
+        \item Mechatronic System Design Project II (METR4810) trophy
+    \end{list}
 
-\item \textit{2020}
-\begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
-    \item Hawken Scholar 2020 (top 5\% of undergraduate Engineering cohort)
-    \item Prentice Scholar 2020 (top 5\% of undergraduate Computer Science cohort)
-    \item Semester 2 Dean's Commendation for Academic Excellence
-    \item Shortlisted for Anglo American Metallurgical Coal Engineering Scholarship
-    \item Semester 1 Dean's Commendation for Academic Excellence
-\end{list}
+    \vspace{1em}
 
-\vspace{1em}
+    \item \textit{2021}
+    \begin{list}{$\cdot$}{\leftmargin=1em}
+        \item Semester 2 Dean's Commendation for Academic Excellence
+        \item Semester 1 Dean's Commendation for Academic Excellence
+        \item Shortlisted for Rio Tinto Excellence Scholarships and Graduate Program
+        \item Shortlisted for L3 Harris Scholarship in Electrical Engineering
+    \end{list}
 
-\item \textit{2019}
-\begin{list}{$\cdot$}{\leftmargin=1em}
-    \item Semester 2 Dean's Commendation for Academic Excellence
-    \item Recipient of the Information Communications Technology (ICT) Excellence Scholarship
-    \item Semester 1 Dean's Commendation for Academic Excellence
-    \item Queensland Certificate of Education Certificate of Commendation
-    \item Queensland Certificate of Education Achievement Award
-\end{list}
+    \vspace{1em}
 
-\end{rSection}
+    \item \textit{2020}
+    \begin{list}{$\cdot$}{\leftmargin=1em}
+        \item Hawken Scholar 2020 (top 5\% of undergraduate Engineering cohort)
+        \item Prentice Scholar 2020 (top 5\% of undergraduate Computer Science cohort)
+        \item Semester 2 Dean's Commendation for Academic Excellence
+        \item Shortlisted for Anglo American Metallurgical Coal Engineering Scholarship
+        \item Semester 1 Dean's Commendation for Academic Excellence
+    \end{list}
 
-% RELEVANT COURSES SECTION
-%----------------------------------------------------------------------------------------
-%\vspace{1em}
-%\begin{rSection}{Relevant Courses}
-%\itab{\textbf{Core Courses}} \tab{}  \tab{\textbf{Other Courses}}
+    \vspace{1em}
 
-%\\ \itab{Fluid Mechanics \& its applications } \tab{}  \tab{Computational Methods in Engineering}
-%\\ \itab{Thermodynamics} \tab{}  \tab{Fundamental of Computing}
-%\\ \itab{Heat Transfer \& its applications} \tab{}  \tab{Probability and Statistics}
-%\\ \itab{Mass Transfer \& its applications} \tab{} \tab{Calculus \& Linear Algebra}
-%\\ \itab{Transport Phenomena (ongoing)} \tab{} \tab{Introduction to Mechanics}
-% \\ \itab{Process Control (ongoing)} \tab{} \tab{Electrodynamics}
-
-%\end{rSection}
-
-% EXTRACURRICULAR SECTION
-%----------------------------------------------------------------------------------------
-\vspace{1em}
-\begin{rSection}{Extra-Curricular}
-
-\begin{list}{$\cdot$}{\leftmargin=1em}
-    \item Australian representative at the International Linguistics Olympiad (2018)
-    \item Queensland representative for the Earth \& Environmental Science Olympiad (2018)
-    \item AMEB Certificate of Performance for Piano (2018)
-    \item Violinist for the Greater Public Schools (GPS) Centenary Music Showcase (2018)
-    \item FIRST Tech Challenge (FTC) participant for three seasons (2016 - 2018)
-\end{list}
+    \item \textit{2019}
+    \begin{list}{$\cdot$}{\leftmargin=1em}
+        \item Semester 2 Dean's Commendation for Academic Excellence
+        \item Recipient of the Information Communications Technology (ICT) Excellence Scholarship
+        \item Semester 1 Dean's Commendation for Academic Excellence
+    \end{list}
 
 \end{rSection}
 
