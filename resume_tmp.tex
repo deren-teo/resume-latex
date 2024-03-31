@@ -1,0 +1,150 @@
+\documentclass{minimal-resume}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumitem}
+\usepackage[a4paper, top=1.8cm, bottom=1.8cm, left=2cm, right=1.5cm]{geometry}
+
+\usepackage{lipsum} % DEBUG
+
+\begin{document}
+
+\fontfamily{cmss}\selectfont
+
+%-------------------------------------------------------------------------------
+% TITLE BLOCK
+%-------------------------------------------------------------------------------
+
+\SetName{Deren Teo}
+\SetSubtitle{Mechatronics \& Machine Learning Graduate}
+\TitleRule
+
+%-------------------------------------------------------------------------------
+% LEFT-SIDE SECTIONS (SHADED)
+%-------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.25\textwidth}
+
+  \raggedright
+
+  % CONTACT SECTION
+
+  \begin{section}{Contact}
+    \SetPhone{0490 517 568}
+    \SetEmail{teo.deren@icloud.com}
+    \SetLinkedin{in/derenteo}
+    \SetLocation{Brisbane, AU}
+  \end{section}
+
+  \SectionRule
+
+  % EDUCATION SECTION
+
+  \begin{section}{Education}
+    {
+      \small
+      \textbf{Bachelor of Engineering\\ (Honours) / Bachelor of\\ Computer Science}
+    } \\[1em]
+    {
+      \large
+      \textbf{The University of\\ Queensland} \\[1em]
+    }
+    \textit{2019 - 2023} \\[1em]
+    Mechatronic Engineering / Machine Learning \\[1em]
+    1st Class Honours (GPA 6.9)
+  \end{section}
+
+  \SectionRule
+
+  % SKILLS SECTION
+
+  \begin{section}{Skills}
+    \textbf{Programming Languages} \\[2pt]
+    \textit{C, C++, Java, MATLAB, R, Python} \\[8pt]
+
+    \textbf{Version Control} \\[2pt]
+    \textit{Git, GitHub, GitLab, SVN} \\[8pt]
+
+    \textbf{CAD \& PCB Design} \\[2pt]
+    \textit{Autodesk Fusion, Altium} \\[8pt]
+
+    \textbf{3D Printing} \\[8pt]
+
+    \textbf{Data Visualisation} \\[8pt]
+
+    \textbf{Embedded Programming} \\[8pt]
+
+    \textbf{Linux} \\[8pt]
+
+    \textbf{Machine Learning} \\[8pt]
+
+    \textbf{PLC Programming} \\[8pt]
+
+    \textbf{Robot Operating System} \\[2pt]
+    \textit{ROS, ROS2}
+  \end{section}
+
+\end{minipage}%
+\hspace{0.06\textwidth}
+\begin{minipage}[t]{0.61\textwidth}
+
+  \raggedright
+
+  % PROFILE SECTION
+
+  \begin{section}{Profile}
+    I'm a fresh mechatronics and machine learning graduate with a passion for creating innovative solutions to real-world problems. I'd describe myself as a dedicated lifelong learner, with key skills including Python, C++ and Linux. I believe in consistently pushing boundaries and delivering excellent results, and I'm always looking for opportunities to apply my knowledge in challenging and exciting roles in the robotics and automation industry.
+  \end{section}
+
+  \SectionRule
+
+  % WORK EXPERIENCE SECTION
+
+  \begin{section}{Work Experience}
+
+    \textbf{Drone Engineer} \\[8pt]
+
+    \textit{Burl Aerospace} \hfill Dec 2023 -- Present \\[8pt]
+
+    Developing a proof-of-concept for a novel point-to-point aerial transportation vehicle.
+
+    \begin{itemize}[leftmargin=*]
+      \item Ground-up mechanical design of a novel, small-scale UAV, rapidly prototyped via 3D printing
+      \item PCB design, simultaneously for electrical transmission and as a major structural feature
+      \item Developing custom embedded C++ software on top of open source PX4 flight control software
+    \end{itemize}
+
+    \vspace{8pt}
+
+    \textbf{Undergraduate Engineer} \\[8pt]
+
+    \textit{Universal Field Robots} \hfill Nov 2022 -- Feb 2023\\[8pt]
+
+    Internship project on retrofitting an ATV with robotic gear and an autonomous driving stack for a pipeline inspection.
+
+    \begin{itemize}[leftmargin=*]
+      \item Programming ROS2 software in C++ for communicating with hardware using CAN specification
+      \item Integrating sensors (quadrature, IMU, LiDAR, radar and GPS) using EKF for sensor fusion
+      \item Assessing the most suitable radar hardware for a new project, and coordinating with international suppliers to procure the radar
+      \item Liaising with clients in mining automation to identify project direction and requirements
+    \end{itemize}
+
+    \vspace{8pt}
+
+    \textbf{Vice Chair $\rightarrow$ Chair} \\[8pt]
+
+    \textit{IEEE UQ Student Branch} \hfill Jul 2021 -- Nov 2023
+
+    \begin{itemize}[leftmargin=*]
+      \item Liaising with academics and industry professionals to organise on-campus events for students
+      \item Building collaborative relationships with other UQ societies to promote IEEE to a diverse audience
+      \item Participating in Queensland Section committee meetings to align goals with the broader IEEE community
+    \end{itemize}
+
+  \end{section}
+
+\end{minipage}
+
+\FooterRule
+
+\end{document}
