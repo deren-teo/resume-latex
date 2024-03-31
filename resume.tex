@@ -7,6 +7,13 @@
 % Created by Deren Teo
 %
 
+%
+% TODO:
+% - Implement references section
+% - Remove "magic numbers" defining size & position of shaded grey section
+% - Have title block appear by default on each page
+%
+
 \documentclass{custom-resume}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -25,82 +32,93 @@
 \SetName{Deren Teo}
 \SetSubtitle{Mechatronics \& Machine Learning Graduate}
 \TitleRule
+\vspace{-6pt} % remove space between TitleRule & top of minipages
 
-\begin{minipage}[t]{0.25\textwidth}
+\hspace{-2cm} % position light grey background effect at the very left margin
+\colorbox{grey0}{
+\begin{minipage}[t][23cm]{0.36\textwidth}
 
   %-----------------------------------------------------------------------------
   % LEFT-SIDE SECTIONS (SHADED)
   %-----------------------------------------------------------------------------
 
-  \raggedright
+  \hspace{1.6cm}  % nest another minipage for the content, regularly aligned
+  \begin{minipage}[t][23cm]{0.7\textwidth}
 
-  % CONTACT SECTION ------------------------------------------------------------
+    \raggedright
 
-  \begin{section}{Contact}
-    \SetPhone{0490 517 568}
-    \SetEmail{teo.deren@icloud.com}
-    \SetLinkedin{in/derenteo}
-    \SetLocation{Brisbane, AU}
-  \end{section}
+    \vspace{6pt} % Compensate for -ve space between TitleRule & top of minipage
 
-  % EDUCATION SECTION ----------------------------------------------------------
+    % CONTACT SECTION ------------------------------------------------------------
 
-  \begin{section}{Education}
-    {
-      \small
-      \textbf{Bachelor of Engineering\\ (Honours) / Bachelor of\\ Computer Science}
-    } \\[8pt]
+    \begin{section}{Contact}
+      \SetPhone{0490 517 568}
+      \SetEmail{teo.deren@icloud.com}
+      \SetLinkedin{in/derenteo}
+      \SetLocation{Brisbane, AU}
+    \end{section}
 
-    {
-      \large
-      \textbf{The University of\\ Queensland} \\[8pt]
-    }
+    % EDUCATION SECTION ----------------------------------------------------------
 
-    \textit{2019 - 2023} \\[8pt]
+    \begin{section}{Education}
+      {
+        \small
+        \textbf{Bachelor of Engineering\\ (Honours) / Bachelor of\\ Computer Science}
+      } \\[8pt]
 
-    Mechatronic Engineering / Machine Learning \\[8pt]
+      {
+        \large
+        \textbf{The University of\\ Queensland} \\[8pt]
+      }
 
-    1st Class Honours (GPA 6.9)
+      \textit{2019 - 2023} \\[8pt]
 
-  \end{section}
+      Mechatronic Engineering / Machine Learning \\[8pt]
 
-  % SKILLS SECTION -------------------------------------------------------------
+      1st Class Honours (GPA 6.9)
 
-  \begin{section*}{Skills}
-    \textbf{Programming Languages} \\[2pt]
-    \textit{C, C++, Java, MATLAB, R, Python} \\[8pt]
+    \end{section}
 
-    \textbf{Version Control} \\[2pt]
-    \textit{Git, GitHub, GitLab, SVN} \\[8pt]
+    % SKILLS SECTION -------------------------------------------------------------
 
-    \textbf{CAD \& PCB Design} \\[2pt]
-    \textit{Autodesk Fusion, Altium} \\[8pt]
+    \begin{section*}{Skills}
+      \textbf{Programming Languages} \\[2pt]
+      \textit{C, C++, Java, MATLAB, R, Python} \\[8pt]
 
-    \textbf{3D Printing} \\[8pt]
+      \textbf{Version Control} \\[2pt]
+      \textit{Git, GitHub, GitLab, SVN} \\[8pt]
 
-    \textbf{Data Visualisation} \\[8pt]
+      \textbf{CAD \& PCB Design} \\[2pt]
+      \textit{Autodesk Fusion, Altium} \\[8pt]
 
-    \textbf{Embedded Programming} \\[8pt]
+      \textbf{3D Printing} \\[8pt]
 
-    \textbf{Linux} \\[8pt]
+      \textbf{Data Visualisation} \\[8pt]
 
-    \textbf{Machine Learning} \\[8pt]
+      \textbf{Embedded Programming} \\[8pt]
 
-    \textbf{PLC Programming} \\[8pt]
+      \textbf{Linux} \\[8pt]
 
-    \textbf{Robot Operating System} \\[2pt]
-    \textit{ROS, ROS2}
-  \end{section*}
+      \textbf{Machine Learning} \\[8pt]
 
-\end{minipage}%
+      \textbf{PLC Programming} \\[8pt]
+
+      \textbf{Robot Operating System} \\[2pt]
+      \textit{ROS, ROS2}
+    \end{section*}
+
+  \end{minipage}
+\end{minipage}}%
 \hspace{0.06\textwidth}%
-\begin{minipage}[t]{0.61\textwidth}
+\begin{minipage}[t][23cm]{0.61\textwidth}
 
   %-----------------------------------------------------------------------------
   % RIGHT-SIDE SECTIONS (UNSHADED)
   %-----------------------------------------------------------------------------
 
   \raggedright
+
+  \vspace{6pt} % Compensate for -ve space between TitleRule & top of minipage
 
   % PROFILE SECTION ------------------------------------------------------------
 
@@ -166,39 +184,50 @@
 \SetName{Deren Teo}
 \SetSubtitle{Mechatronics \& Machine Learning Graduate}
 \TitleRule
+\vspace{-6pt} % remove space between TitleRule & top of minipages
 
-\begin{minipage}[t]{0.25\textwidth}
+\hspace{-2cm} % position light grey background effect at the very left margin
+\colorbox{grey0}{
+\begin{minipage}[t][21.5cm]{0.36\textwidth}
 
-  %-------------------------------------------------------------------------------
+  %-----------------------------------------------------------------------------
   % LEFT-SIDE SECTIONS (SHADED)
-  %-------------------------------------------------------------------------------
+  %-----------------------------------------------------------------------------
 
-  \raggedright
+  \hspace{1.6cm}  % nest another minipage for the content, regularly aligned
+  \begin{minipage}[t][21.5cm]{0.7\textwidth}
 
-  % CONTACT SECTION (2ND PAGE) -------------------------------------------------
+    \raggedright
 
-  \begin{section}{Contact}
-    \SetPhone{0490 517 568}
-    \SetEmail{teo.deren@icloud.com}
-    \SetLinkedin{in/derenteo}
-    \SetLocation{Brisbane, AU}
-  \end{section}
+    \vspace{6pt} % Compensate for -ve space between TitleRule & top of minipage
 
-  % REFERENCES SECTION ---------------------------------------------------------
+    % CONTACT SECTION (2ND PAGE) -------------------------------------------------
 
-  \begin{section*}{References}
-    \dots
-  \end{section*}
+    \begin{section}{Contact}
+      \SetPhone{0490 517 568}
+      \SetEmail{teo.deren@icloud.com}
+      \SetLinkedin{in/derenteo}
+      \SetLocation{Brisbane, AU}
+    \end{section}
 
-\end{minipage}%
+    % REFERENCES SECTION ---------------------------------------------------------
+
+    \begin{section*}{References}
+      \dots
+    \end{section*}
+
+  \end{minipage}
+\end{minipage}}%
 \hspace{0.06\textwidth}
-\begin{minipage}[t]{0.61\textwidth}
+\begin{minipage}[t][21.5cm]{0.61\textwidth}
 
   %-----------------------------------------------------------------------------
   % RIGHT-SIDE SECTIONS (UNSHADED)
   %-----------------------------------------------------------------------------
 
   \raggedright
+
+  \vspace{6pt} % Compensate for -ve space between TitleRule & top of minipage
 
   % WORK EXPERIENCE SECTION (CONT'D) -------------------------------------------
 

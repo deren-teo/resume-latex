@@ -33,6 +33,7 @@
 \sodef\LooseSpacing{}{0.25em}{1em}{0em}
 
 % xcolor configuration
+\definecolor{grey0}{HTML}{F2F2F2}
 \definecolor{grey1}{HTML}{595959}
 \definecolor{grey2}{HTML}{7F7F7F}
 \definecolor{grey3}{HTML}{A6A6A6}
