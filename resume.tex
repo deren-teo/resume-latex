@@ -1,3 +1,12 @@
+%
+% Custom Resume Template
+%
+% Based on the following Canva design by Saga Design Studio:
+%   https://www.canva.com/p/templates/EAFSLI7n6x4-minimalist-white-and-grey-professional-resume/
+%
+% Created by Deren Teo
+%
+
 \documentclass{custom-resume}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -7,7 +16,7 @@
 
 \begin{document}
 
-\fontfamily{cmss}\selectfont
+\fontfamily{cmss}\selectfont  % Computer Modern Sans Serif
 
 %-------------------------------------------------------------------------------
 % TITLE BLOCK
@@ -17,15 +26,15 @@
 \SetSubtitle{Mechatronics \& Machine Learning Graduate}
 \TitleRule
 
-%-------------------------------------------------------------------------------
-% LEFT-SIDE SECTIONS (SHADED)
-%-------------------------------------------------------------------------------
-
 \begin{minipage}[t]{0.25\textwidth}
+
+  %-----------------------------------------------------------------------------
+  % LEFT-SIDE SECTIONS (SHADED)
+  %-----------------------------------------------------------------------------
 
   \raggedright
 
-  % CONTACT SECTION
+  % CONTACT SECTION ------------------------------------------------------------
 
   \begin{section}{Contact}
     \SetPhone{0490 517 568}
@@ -34,9 +43,7 @@
     \SetLocation{Brisbane, AU}
   \end{section}
 
-  \SectionRule
-
-  % EDUCATION SECTION
+  % EDUCATION SECTION ----------------------------------------------------------
 
   \begin{section}{Education}
     {
@@ -57,11 +64,9 @@
 
   \end{section}
 
-  \SectionRule
+  % SKILLS SECTION -------------------------------------------------------------
 
-  % SKILLS SECTION
-
-  \begin{section}{Skills}
+  \begin{section*}{Skills}
     \textbf{Programming Languages} \\[2pt]
     \textit{C, C++, Java, MATLAB, R, Python} \\[8pt]
 
@@ -85,25 +90,28 @@
 
     \textbf{Robot Operating System} \\[2pt]
     \textit{ROS, ROS2}
-  \end{section}
+  \end{section*}
 
 \end{minipage}%
-\hspace{0.06\textwidth}
+\hspace{0.06\textwidth}%
 \begin{minipage}[t]{0.61\textwidth}
+
+  %-----------------------------------------------------------------------------
+  % RIGHT-SIDE SECTIONS (UNSHADED)
+  %-----------------------------------------------------------------------------
 
   \raggedright
 
-  % PROFILE SECTION
+  % PROFILE SECTION ------------------------------------------------------------
 
   \begin{section}{Profile}
     I'm a fresh mechatronics and machine learning graduate with a passion for creating innovative solutions to real-world problems. I'd describe myself as a dedicated lifelong learner, with key skills including Python, C++ and Linux. I believe in consistently pushing boundaries and delivering excellent results, and I'm always looking for opportunities to apply my knowledge in challenging and exciting roles in the robotics and automation industry.
+    \vspace{2pt} % modify spacing to align horizontal divider w/ Contact section
   \end{section}
 
-  \SectionRule
+  % WORK EXPERIENCE SECTION ----------------------------------------------------
 
-  % WORK EXPERIENCE SECTION
-
-  \begin{section}{Work Experience}
+  \begin{section*}{Work Experience}
 
     \textbf{Drone Engineer} \\[8pt]
 
@@ -144,7 +152,7 @@
       \item Participating in Queensland Section committee meetings to align goals with the broader IEEE community
     \end{itemize}
 
-  \end{section}
+  \end{section*}
 
 \end{minipage}
 
@@ -152,22 +160,22 @@
 \newpage
 
 %-------------------------------------------------------------------------------
-% TITLE BLOCK
+% TITLE BLOCK (2ND PAGE)
 %-------------------------------------------------------------------------------
 
 \SetName{Deren Teo}
 \SetSubtitle{Mechatronics \& Machine Learning Graduate}
 \TitleRule
 
-%-------------------------------------------------------------------------------
-% LEFT-SIDE SECTIONS (SHADED)
-%-------------------------------------------------------------------------------
-
 \begin{minipage}[t]{0.25\textwidth}
+
+  %-------------------------------------------------------------------------------
+  % LEFT-SIDE SECTIONS (SHADED)
+  %-------------------------------------------------------------------------------
 
   \raggedright
 
-  % CONTACT SECTION
+  % CONTACT SECTION (2ND PAGE) -------------------------------------------------
 
   \begin{section}{Contact}
     \SetPhone{0490 517 568}
@@ -176,21 +184,23 @@
     \SetLocation{Brisbane, AU}
   \end{section}
 
-  \SectionRule
+  % REFERENCES SECTION ---------------------------------------------------------
 
-  % REFERENCES SECTION
-
-  \begin{section}{References}
+  \begin{section*}{References}
     \dots
-  \end{section}
+  \end{section*}
 
 \end{minipage}%
 \hspace{0.06\textwidth}
 \begin{minipage}[t]{0.61\textwidth}
 
+  %-----------------------------------------------------------------------------
+  % RIGHT-SIDE SECTIONS (UNSHADED)
+  %-----------------------------------------------------------------------------
+
   \raggedright
 
-  % WORK EXPERIENCE SECTION (CONT'D)
+  % WORK EXPERIENCE SECTION (CONT'D) -------------------------------------------
 
   \begin{section}{Work Experience}
 
@@ -209,11 +219,9 @@
 
   \end{section}
 
-  \SectionRule
+  % HONOURS & AWARDS SECTION ---------------------------------------------------
 
-  % HONOURS & AWARDS SECTION
-
-  \begin{section}{Honours \& Awards}
+  \begin{section*}{Honours \& Awards}
 
     \textit{2019 -- 2023}
     \begin{itemize}[leftmargin=*]
@@ -248,7 +256,7 @@
       \item Queensland Certificate of Education (QCE) Distinguished Academic Achiever Award
     \end{itemize}
 
-  \end{section}
+  \end{section*}
 
 \end{minipage}
 

@@ -22,11 +22,12 @@
 
 % \DeclareOption{...}{...}
 
-\LoadClass{article}
+\LoadClass{article}                 % build on the article class
 
-\pagestyle{empty}
+\pagestyle{empty}                   % remove page numbers
 
-\renewcommand{\normalsize}{\fontsize{10}{10}\selectfont}
+% Set default font size to 9pt, reduce line spacing to 85% of default
+\renewcommand{\normalsize}{\fontsize{10}{0.85\baselineskip}\selectfont}
 
 % soul configuration
 \sodef\LooseSpacing{}{0.25em}{1em}{0em}
@@ -76,7 +77,7 @@
 \newcommand{\SetName}[1]{%
     {
         \centering
-        \fontsize{28}{28}\selectfont
+        \fontsize{28}{\baselineskip}\selectfont
         \textcolor{grey1}{
             \MakeUppercase{
                 \LooseSpacing{#1}
@@ -90,7 +91,7 @@
 \newcommand{\SetSubtitle}[1]{%
     {
         \centering
-        \fontsize{10}{10}\selectfont
+        \fontsize{10}{\baselineskip}\selectfont
         \textcolor{grey1}{
             \MakeUppercase{%
                 \LooseSpacing{#1}
@@ -110,7 +111,27 @@
         \color{grey1}
         \vspace{8pt}
         {
-            \fontsize{12}{12}\selectfont
+            \fontsize{12}{\baselineskip}\selectfont
+            \MakeUppercase{%
+                \LooseSpacing{#1}
+            }
+        }
+        \par
+        \vspace{12pt}
+}
+{
+        \vspace{12pt}
+        \SectionRule
+    \endgroup
+}
+
+% "Starred" (*) version does not put SectionRule at the end of the section
+\newenvironment{section*}[1]{
+    \begingroup
+        \color{grey1}
+        \vspace{8pt}
+        {
+            \fontsize{12}{\baselineskip}\selectfont
             \MakeUppercase{%
                 \LooseSpacing{#1}
             }
