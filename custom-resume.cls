@@ -1,5 +1,5 @@
 %
-% Minimal Resume - Class File
+% Custom Resume - Class File
 %
 % Based on the following Canva design by Saga Design Studio:
 %   https://www.canva.com/p/templates/EAFSLI7n6x4-minimalist-white-and-grey-professional-resume/
@@ -12,13 +12,13 @@
 %-------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{minimal-resume}[2024/03/23 Minimal resume class]
+\ProvidesClass{custom-resume}[2024/03/31 Custom resume class]
 
-\RequirePackage{fix-cm}             % enable arbitrary size scaling of CM fonts
-\RequirePackage{soul}               % increase inter-letter space
-\RequirePackage{tikz}               % draw horizontal lines and shaded boxes
-\RequirePackage{xcolor}             % font and graphics colours
 % \RequirePackage{...}
+\RequirePackage{fix-cm}             % enable arbitrary size scaling of CM fonts
+\RequirePackage{graphicx}           % inserting & scaling contact icons
+\RequirePackage{soul}               % increase inter-letter space
+\RequirePackage{xcolor}             % font and graphics colours
 
 % \DeclareOption{...}{...}
 
@@ -30,9 +30,6 @@
 
 % soul configuration
 \sodef\LooseSpacing{}{0.25em}{1em}{0em}
-
-% tikz configuration
-\tikzset{every picture/.append style={trim top=0}}
 
 % xcolor configuration
 \definecolor{grey1}{HTML}{595959}
@@ -111,7 +108,7 @@
 \renewenvironment{section}[1]{
     \begingroup
         \color{grey1}
-        \vspace{15pt}
+        \vspace{8pt}
         {
             \fontsize{12}{12}\selectfont
             \MakeUppercase{%
@@ -119,7 +116,7 @@
             }
         }
         \par
-        \vspace{8pt}
+        \vspace{12pt}
 }
 {
         \vspace{12pt}
@@ -161,37 +158,3 @@
     \textcolor{grey2}{#1}
     \par
 }
-
-%-------------------------------------------------------------------------------
-% PROFILE SECTION
-%-------------------------------------------------------------------------------
-
-
-
-%-------------------------------------------------------------------------------
-% EDUCATION SECTION
-%-------------------------------------------------------------------------------
-
-
-
-%-------------------------------------------------------------------------------
-% SKILLS SECTION
-%-------------------------------------------------------------------------------
-
-
-
-%-------------------------------------------------------------------------------
-% WORK EXPERIENCE SECTION
-%-------------------------------------------------------------------------------
-
-
-
-%-------------------------------------------------------------------------------
-% HONOURS & AWARDS SECTION
-%-------------------------------------------------------------------------------
-
-
-
-%-------------------------------------------------------------------------------
-% REFERENCES SECTION
-%-------------------------------------------------------------------------------

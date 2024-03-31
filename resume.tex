@@ -1,150 +1,257 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-%
-% The original template was downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring
-% the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%-------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%-------------------------------------------------------------------------------
-
-\documentclass{resume} % Use the custom resume.cls style
-
-\usepackage{cmbright}
+\documentclass{custom-resume}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage[margin=1in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\renewcommand{\baselinestretch}{1.2}
-
-\name{Deren Teo}
-\address{1007/45 Boundary St, South Brisbane QLD 4101}
-\address{(+61) 490 517 568 \\ linkedin.com/in/derenteo \\ teo.deren@icloud.com}
+\usepackage{enumitem}
+\usepackage[a4paper, top=1.8cm, bottom=1.8cm, left=2cm, right=1.5cm]{geometry}
 
 \begin{document}
 
-%-------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%-------------------------------------------------------------------------------
-
-\begin{rSection}{Education}
-
-    {\bf University of Queensland} \hfill {\em Feb 2019 - Dec 2023}
-    \\ Bachelor of Engineering (Honours), Mechatronic Engineering; and \hfill { GPA : 6.9 / 7}
-    \\ Bachelor of Computer Science, Machine Learning
-
-\end{rSection}
+\fontfamily{cmss}\selectfont
 
 %-------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
+% TITLE BLOCK
 %-------------------------------------------------------------------------------
-\vspace{1em}
-\begin{rSection}{Skills}
 
-    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-    Programming Languages & Python, Java, C, C++, MATLAB \\
-    Technical Skills & Linux, ROS, CAD software, Altium Designer \\
-    \end{tabular}
-
-\end{rSection}
+\SetName{Deren Teo}
+\SetSubtitle{Mechatronics \& Machine Learning Graduate}
+\TitleRule
 
 %-------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+% LEFT-SIDE SECTIONS (SHADED)
 %-------------------------------------------------------------------------------
-\vspace{1em}
-\begin{rSection}{Experience}
 
-    \begin{rSubsection}{Burl Aerospace}{Dec 2023 - Present}{Drone Engineer}{}
-        \item Ground up mechanical design of a novel, small-scale UAV, rapidly prototyped via 3D printing
-        \item PCB design, simultaneously for electrical transmission and as a major structural feature
-        \item Custom embedded software development on top of open source PX4 flight control software
-    \end{rSubsection}
+\begin{minipage}[t]{0.25\textwidth}
 
-    \begin{rSubsection}{IEEE UQ Student Branch}{Jul 2021 - Nov 2023}{Vice-Chair $\rightarrow$ Chair}{}
-        \item Liaised with academics and industry professionals to organise on-campus events for students
-        \item Built collaborative relationships with other UQ societies to promote IEEE to a diverse audience
-        \item Participated in Qld. Section committee meetings to align goals with the broader IEEE body
-    \end{rSubsection}
+  \raggedright
 
-    \begin{rSubsection}{Synengco}{Nov 2019 - Nov 2023}{Student Software Engineer}{}
-        \item Built and tested Bayesian methods for supply chain modelling and optimisation
-        \item Visualised big data from monitoring of industrial assets
-        \item Developed software aligned with the Open Industrial Interoperability Ecosystem (OIIE)
-        \item Collaborated with major power generation clients to optimise their code base
-    \end{rSubsection}
+  % CONTACT SECTION
 
+  \begin{section}{Contact}
+    \SetPhone{0490 517 568}
+    \SetEmail{teo.deren@icloud.com}
+    \SetLinkedin{in/derenteo}
+    \SetLocation{Brisbane, AU}
+  \end{section}
+
+  \SectionRule
+
+  % EDUCATION SECTION
+
+  \begin{section}{Education}
+    {
+      \small
+      \textbf{Bachelor of Engineering\\ (Honours) / Bachelor of\\ Computer Science}
+    } \\[8pt]
+
+    {
+      \large
+      \textbf{The University of\\ Queensland} \\[8pt]
+    }
+
+    \textit{2019 - 2023} \\[8pt]
+
+    Mechatronic Engineering / Machine Learning \\[8pt]
+
+    1st Class Honours (GPA 6.9)
+
+  \end{section}
+
+  \SectionRule
+
+  % SKILLS SECTION
+
+  \begin{section}{Skills}
+    \textbf{Programming Languages} \\[2pt]
+    \textit{C, C++, Java, MATLAB, R, Python} \\[8pt]
+
+    \textbf{Version Control} \\[2pt]
+    \textit{Git, GitHub, GitLab, SVN} \\[8pt]
+
+    \textbf{CAD \& PCB Design} \\[2pt]
+    \textit{Autodesk Fusion, Altium} \\[8pt]
+
+    \textbf{3D Printing} \\[8pt]
+
+    \textbf{Data Visualisation} \\[8pt]
+
+    \textbf{Embedded Programming} \\[8pt]
+
+    \textbf{Linux} \\[8pt]
+
+    \textbf{Machine Learning} \\[8pt]
+
+    \textbf{PLC Programming} \\[8pt]
+
+    \textbf{Robot Operating System} \\[2pt]
+    \textit{ROS, ROS2}
+  \end{section}
+
+\end{minipage}%
+\hspace{0.06\textwidth}
+\begin{minipage}[t]{0.61\textwidth}
+
+  \raggedright
+
+  % PROFILE SECTION
+
+  \begin{section}{Profile}
+    I'm a fresh mechatronics and machine learning graduate with a passion for creating innovative solutions to real-world problems. I'd describe myself as a dedicated lifelong learner, with key skills including Python, C++ and Linux. I believe in consistently pushing boundaries and delivering excellent results, and I'm always looking for opportunities to apply my knowledge in challenging and exciting roles in the robotics and automation industry.
+  \end{section}
+
+  \SectionRule
+
+  % WORK EXPERIENCE SECTION
+
+  \begin{section}{Work Experience}
+
+    \textbf{Drone Engineer} \\[8pt]
+
+    \textit{Burl Aerospace} \hfill Dec 2023 -- Present \\[8pt]
+
+    Developing a proof-of-concept for a novel point-to-point aerial transportation vehicle.
+
+    \begin{itemize}[leftmargin=*]
+      \item Ground-up mechanical design of a novel, small-scale UAV, rapidly prototyped via 3D printing
+      \item PCB design, simultaneously for electrical transmission and as a major structural feature
+      \item Developing custom embedded C++ software on top of open source PX4 flight control software
+    \end{itemize}
+
+    \vspace{8pt}
+
+    \textbf{Undergraduate Engineer} \\[8pt]
+
+    \textit{Universal Field Robots} \hfill Nov 2022 -- Feb 2023\\[8pt]
+
+    Internship project on retrofitting an ATV with robotic gear and an autonomous driving stack for a pipeline inspection.
+
+    \begin{itemize}[leftmargin=*]
+      \item Programming ROS2 software in C++ for communicating with hardware using CAN specification
+      \item Integrating sensors (quadrature, IMU, LiDAR, radar and GPS) using EKF for sensor fusion
+      \item Assessing the most suitable radar hardware for a new project, and coordinating with international suppliers to procure the radar
+      \item Liaising with clients in mining automation to identify project direction and requirements
+    \end{itemize}
+
+    \vspace{8pt}
+
+    \textbf{Vice Chair $\rightarrow$ Chair} \\[8pt]
+
+    \textit{IEEE UQ Student Branch} \hfill Jul 2021 -- Nov 2023
+
+    \begin{itemize}[leftmargin=*]
+      \item Liaising with academics and industry professionals to organise on-campus events for students
+      \item Building collaborative relationships with other UQ societies to promote IEEE to a diverse audience
+      \item Participating in Queensland Section committee meetings to align goals with the broader IEEE community
+    \end{itemize}
+
+  \end{section}
+
+\end{minipage}
+
+\FooterRule
 \newpage
 
-    \begin{rSubsection}{Universal Field Robots}{Nov 2022 - Feb 2023}{Robotics Engineer Intern}{}
-        \item Programmed ROS2 software for communication with hardware using CAN specification
-        \item Tested systems under development in simulation and on real hardware
-        \item Integrated sensors (quadrature, IMU, LiDAR, radar and GPS) using EKF for sensor fusion
-        \item Liaised with clients in mining automation to identify project direction and requirements
-    \end{rSubsection}
+%-------------------------------------------------------------------------------
+% TITLE BLOCK
+%-------------------------------------------------------------------------------
 
-\end{rSection}
+\SetName{Deren Teo}
+\SetSubtitle{Mechatronics \& Machine Learning Graduate}
+\TitleRule
 
 %-------------------------------------------------------------------------------
-%	ACADEMICS SECTION
+% LEFT-SIDE SECTIONS (SHADED)
 %-------------------------------------------------------------------------------
-\begin{rSection}{Honors \& Awards} \itemsep -2pt
 
-    \item \textit{2019 - 2023}
-    \begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
-        \item Dean's Commendation for Academic Excellence --- All semesters (10 awards in total)
-    \end{list}
+\begin{minipage}[t]{0.25\textwidth}
 
-    \vspace{1em}
+  \raggedright
 
-    \item \textit{2023}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Les Dobson Memorial Prize for Best Systems \& Software Engineering Project (Honours thesis)
-        \item IEEE Queensland Section Student Thesis Prize --- General Category
-        \item Best Project in Avionics \& UAV (Honours thesis)
-    \end{list}
+  % CONTACT SECTION
 
-    \vspace{1em}
+  \begin{section}{Contact}
+    \SetPhone{0490 517 568}
+    \SetEmail{teo.deren@icloud.com}
+    \SetLinkedin{in/derenteo}
+    \SetLocation{Brisbane, AU}
+  \end{section}
 
-    \item \textit{2022}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Mechatronic System Design Project II (METR4810) trophy
-    \end{list}
+  \SectionRule
 
-    \vspace{1em}
+  % REFERENCES SECTION
 
-    \item \textit{2021}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Shortlisted for L3 Harris Scholarship in Electrical Engineering
-        \item Shortlisted for Rio Tinto Excellence Scholarships and Graduate Program
-    \end{list}
+  \begin{section}{References}
+    \dots
+  \end{section}
 
-    \vspace{1em}
+\end{minipage}%
+\hspace{0.06\textwidth}
+\begin{minipage}[t]{0.61\textwidth}
 
-    \item \textit{2020}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Hawken Scholar 2020 (top 5\% of undergraduate Engineering cohort)
-        \item Prentice Scholar 2020 (top 5\% of undergraduate Computer Science cohort)
-        \item Shortlisted for Anglo American Metallurgical Coal Engineering Scholarship
-    \end{list}
+  \raggedright
 
-    \vspace{1em}
+  % WORK EXPERIENCE SECTION (CONT'D)
 
-    \item \textit{2019}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Recipient of the Information Communications Technology (ICT) Excellence Scholarship
-    \end{list}
+  \begin{section}{Work Experience}
 
-\end{rSection}
+    \textbf{Student Engineer} \\[8pt]
+
+    \textit{Synengco} \hfill Nov 2019 -- Nov 2023 \\[8pt]
+
+    Highly varied Python software development experiences, ranging from machine learning and data visualisation to code base optimisation.
+
+    \begin{itemize}[leftmargin=*]
+      \item Building and testing Bayesian methods for supply chain modelling and optimisation
+      \item Visualising big data from the monitoring of industrial assets
+      \item Developing software aligned with the Open Industrial Interoperability Ecosystem (OIIE)
+      \item Collaborating with major power generation clients to optimise their code base
+    \end{itemize}
+
+  \end{section}
+
+  \SectionRule
+
+  % HONOURS & AWARDS SECTION
+
+  \begin{section}{Honours \& Awards}
+
+    \textit{2019 -- 2023}
+    \begin{itemize}[leftmargin=*]
+      \item Dean's Commendation for Academic Excellence – All semesters
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2023}
+    \begin{itemize}[leftmargin=*]
+      \item Les Dobson Memorial Prize for Best Systems \& Software Engineering Project (Honours thesis)
+      \item IEEE Queensland Section Student Thesis Prize – General Category
+      \item Best Project in Avionics \& UAV (Honours thesis)
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2022}
+    \begin{itemize}[leftmargin=*]
+      \item Mechatronic System Design Project II (METR4810) trophy
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2020}
+    \begin{itemize}[leftmargin=*]
+      \item Hawken Scholar (top 5\% of undergraduate Engineering cohort)
+      \item Prentice Scholar (top 5\% of undergraduate Computer Science and Information Technology cohort)
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2019}
+    \begin{itemize}[leftmargin=*]
+      \item Recipient of the Information Communications Technology (ICT) Excellence Scholarship
+      \item Queensland Certificate of Education (QCE) Distinguished Academic Achiever Award
+    \end{itemize}
+
+  \end{section}
+
+\end{minipage}
+
+\FooterRule
 
 \end{document}
