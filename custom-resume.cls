@@ -157,7 +157,7 @@
 }
 
 \newcommand{\SetEmail}[1]{%
-    \vspace{0.5em}
+    \vspace{0.5em} \hspace{-3pt}
     \raisebox{-0.25\height}{\includegraphics[scale=0.7]{static/icon_mail.png}}
     \hspace{0.5em}
     \textcolor{grey2}{#1}
@@ -165,7 +165,7 @@
 }
 
 \newcommand{\SetLinkedin}[1]{%
-    \vspace{0.5em}
+    \vspace{0.5em} \hspace{-2.5pt}
     \raisebox{-0.25\height}{\includegraphics[scale=0.65]{static/icon_linkedin.png}}
     \hspace{0.5em}
     \textcolor{grey2}{#1}
@@ -174,8 +174,8 @@
 
 \newcommand{\SetLocation}[1]{%
     \vspace{0.5em}
-    \raisebox{-0.25\height}{\includegraphics[scale=0.9]{static/icon_location.png}}
-    \hspace{0.1em}
+    \raisebox{-0.2\height}{\includegraphics[scale=0.7]{static/icon_location.png}}
+    \hspace{0.5em}
     \textcolor{grey2}{#1}
     \par
 }
