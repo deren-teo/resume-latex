@@ -1,150 +1,315 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
 %
-% The original template was downloaded from:
-% http://www.LaTeXTemplates.com
+% Custom Resume Template
 %
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
+% Based on the following Canva design by Saga Design Studio:
+%   https://www.canva.com/p/templates/EAFSLI7n6x4-minimalist-white-and-grey-professional-resume/
 %
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring
-% the document.
+% Created by Deren Teo
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%-------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%-------------------------------------------------------------------------------
-
-\documentclass{resume} % Use the custom resume.cls style
-
-\usepackage{cmbright}
+\documentclass{custom-resume}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage[margin=1in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\renewcommand{\baselinestretch}{1.2}
-
-\name{Deren Teo}
-\address{1007/45 Boundary St, South Brisbane QLD 4101}
-\address{(+61) 490 517 568 \\ linkedin.com/in/derenteo \\ teo.deren@icloud.com}
+\usepackage{enumitem}
+\usepackage[a4paper, top=1.8cm, bottom=1.8cm, left=2cm, right=1.5cm]{geometry}
 
 \begin{document}
 
+% Computer Modern Sans Serif
+\fontfamily{cmss}\selectfont
+
+% Custom itemize style for "Work Experience" & "Honours & Awards" sections
+\setitemize{label=\raisebox{0.25ex}{\tiny$\bullet$}, labelsep=1em, leftmargin=*}
+
+% Define proportions of various sections
+
+\newlength{\leftmarginadjust}         % adjust left page margin to position
+\setlength{\leftmarginadjust}{-2cm}   % shaded section closer to the edge
+
+\newlength{\leftouterwidth}           % width of shaded left section
+\setlength{\leftouterwidth}{7.1cm}
+
+\newlength{\leftoutermargin}          % space between left margins of outer and
+\setlength{\leftoutermargin}{1cm}     % inner left sections
+
+\newlength{\leftinnerwidth}           % width of text inside shaded left
+\setlength{\leftinnerwidth}{4.8cm}    % section
+
+\newlength{\innerspacing}             % width between left and right sections
+\setlength{\innerspacing}{0.5cm}
+
+\newlength{\rightouterwidth}
+\setlength{\rightouterwidth}{10.7cm}  % width of unshaded right section
+
 %-------------------------------------------------------------------------------
-%	EDUCATION SECTION
+% TITLE BLOCK
 %-------------------------------------------------------------------------------
 
-\begin{rSection}{Education}
+\SetName{Deren Teo}
+\SetSubtitle{Mechatronics \& Machine Learning Graduate}
+\TitleRule
+\vspace{-6pt} % remove space between TitleRule & top of minipages
 
-    {\bf University of Queensland} \hfill {\em Feb 2019 - Dec 2023}
-    \\ Bachelor of Engineering (Honours), Mechatronic Engineering; and \hfill { GPA : 6.9 / 7}
-    \\ Bachelor of Computer Science, Machine Learning
+\hspace{\leftmarginadjust}  % position light grey background effect at the very left margin
+\colorbox{f2f2f2}{
+\begin{minipage}[t][23cm]{\leftouterwidth}
 
-\end{rSection}
+  %-----------------------------------------------------------------------------
+  % LEFT-SIDE SECTIONS (SHADED)
+  %-----------------------------------------------------------------------------
 
-%-------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%-------------------------------------------------------------------------------
-\vspace{1em}
-\begin{rSection}{Skills}
+  \hspace{\leftoutermargin}  % nest another minipage for the content, regularly aligned
+  \begin{minipage}[t][23cm]{\leftinnerwidth}
 
-    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-    Programming Languages & Python, Java, C, C++, MATLAB \\
-    Technical Skills & Linux, ROS, CAD software, Altium Designer \\
-    \end{tabular}
+    \raggedright
 
-\end{rSection}
+    \vspace{6pt} % compensates for -ve space between TitleRule & top of minipage
 
-%-------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%-------------------------------------------------------------------------------
-\vspace{1em}
-\begin{rSection}{Experience}
+    % CONTACT SECTION ----------------------------------------------------------
 
-    \begin{rSubsection}{Burl Aerospace}{Dec 2023 - Present}{Drone Engineer}{}
-        \item Ground up mechanical design of a novel, small-scale UAV, rapidly prototyped via 3D printing
-        \item PCB design, simultaneously for electrical transmission and as a major structural feature
-        \item Custom embedded software development on top of open source PX4 flight control software
-    \end{rSubsection}
+    \begin{section}{Contact}
+      \SetPhone{0490 517 568}
+      \SetEmail{teo.deren@icloud.com}
+      \SetLinkedin{in/derenteo}
+      \SetLocation{Brisbane, AU}
+      \vspace{0.4em} % modify vspace to align horizontal divider w/ Profile section
+    \end{section}
 
-    \begin{rSubsection}{IEEE UQ Student Branch}{Jul 2021 - Nov 2023}{Vice-Chair $\rightarrow$ Chair}{}
-        \item Liaised with academics and industry professionals to organise on-campus events for students
-        \item Built collaborative relationships with other UQ societies to promote IEEE to a diverse audience
-        \item Participated in Qld. Section committee meetings to align goals with the broader IEEE body
-    \end{rSubsection}
+    % EDUCATION SECTION --------------------------------------------------------
 
-    \begin{rSubsection}{Synengco}{Nov 2019 - Nov 2023}{Student Software Engineer}{}
-        \item Built and tested Bayesian methods for supply chain modelling and optimisation
-        \item Visualised big data from monitoring of industrial assets
-        \item Developed software aligned with the Open Industrial Interoperability Ecosystem (OIIE)
-        \item Collaborated with major power generation clients to optimise their code base
-    \end{rSubsection}
+    \begin{section}{Education}
+      {
+        \small
+        \textbf{Bachelor of Engineering\\ (Honours) / Bachelor of\\ Computer Science}
+      } \\[8pt]
 
+      {
+        \large
+        \textbf{The University of\\ Queensland} \\[8pt]
+      }
+
+      \textit{2019 - 2023} \\[8pt]
+
+      Mechatronic Engineering / Machine Learning \\[8pt]
+
+      1st Class Honours (GPA 6.9)
+
+    \end{section}
+
+    % SKILLS SECTION -----------------------------------------------------------
+
+    \begin{section*}{Skills}
+      \textbf{Programming Languages} \\[2pt]
+      \textit{C, C++, Java, MATLAB, R, Python} \\[8pt]
+
+      \textbf{Version Control} \\[2pt]
+      \textit{Git, GitHub, GitLab, SVN} \\[8pt]
+
+      \textbf{CAD \& PCB Design} \\[2pt]
+      \textit{Autodesk Fusion, Altium} \\[8pt]
+
+      \textbf{3D Printing} \\[8pt]
+
+      \textbf{Data Visualisation} \\[8pt]
+
+      \textbf{Embedded Programming} \\[8pt]
+
+      \textbf{Linux} \\[8pt]
+
+      \textbf{Machine Learning} \\[8pt]
+
+      \textbf{PLC Programming} \\[8pt]
+
+      \textbf{Robot Operating System} \\[2pt]
+      \textit{ROS, ROS2}
+    \end{section*}
+
+  \end{minipage}
+\end{minipage}}%
+\hspace{\innerspacing}%
+\begin{minipage}[t][23cm]{\rightouterwidth}
+
+  %-----------------------------------------------------------------------------
+  % RIGHT-SIDE SECTIONS (UNSHADED)
+  %-----------------------------------------------------------------------------
+
+  \raggedright
+
+  \vspace{6pt} % compensates for -ve space between TitleRule & top of minipage
+
+  % PROFILE SECTION ------------------------------------------------------------
+
+  \begin{section}{Profile}
+    \setlength{\baselineskip}{1.2\baselineskip} % increase line spacing here
+    I'm a fresh mechatronics and machine learning graduate with a passion for creating innovative solutions to real-world problems. I'd describe myself as a dedicated lifelong learner, with key skills including Python, C++ and Linux. I believe in consistently pushing boundaries and delivering excellent results, and I'm always looking for opportunities to apply my knowledge in challenging and exciting roles in the robotics and automation industry. \par
+    \vspace{-1em} % modify vspace to align horizontal divider w/ Contact section
+  \end{section}
+
+  % WORK EXPERIENCE SECTION ----------------------------------------------------
+
+  \begin{section*}{Work Experience}
+
+    \textbf{Drone Engineer} \\[8pt]
+
+    \textit{Burl Aerospace} \hfill Dec 2023 -- Present \\[8pt]
+
+    Developing a proof-of-concept for a novel point-to-point aerial transportation vehicle.
+
+    \begin{itemize}
+      \item Ground-up mechanical design of a novel, small-scale UAV, rapidly prototyped via 3D printing
+      \item PCB design, simultaneously for electrical transmission and as a major structural feature
+      \item Developing custom embedded C++ software on top of open source PX4 flight control software
+    \end{itemize}
+
+    \vspace{8pt}
+
+    \textbf{Undergraduate Engineer} \\[8pt]
+
+    \textit{Universal Field Robots} \hfill Nov 2022 -- Feb 2023\\[8pt]
+
+    Internship project on retrofitting an ATV with robotic gear and an autonomous driving stack for a pipeline inspection.
+
+    \begin{itemize}
+      \item Programming ROS2 software in C++ for communicating with hardware using CAN specification
+      \item Integrating sensors (quadrature, IMU, LiDAR, radar and GPS) using EKF for sensor fusion
+      \item Assessing the most suitable radar hardware for a new project, and coordinating with international suppliers to procure the radar
+      \item Liaising with clients in mining automation to identify project direction and requirements
+    \end{itemize}
+
+    \vspace{8pt}
+
+    \textbf{Vice Chair $\rightarrow$ Chair} \\[8pt]
+
+    \textit{IEEE UQ Student Branch} \hfill Jul 2021 -- Nov 2023
+
+    \begin{itemize}
+      \item Liaising with academics and industry professionals to organise on-campus events for students
+      \item Building collaborative relationships with other UQ societies to promote IEEE to a diverse audience
+      \item Participating in Queensland Section committee meetings to align goals with the broader IEEE community
+    \end{itemize}
+
+  \end{section*}
+
+\end{minipage}
+
+\FooterRule
 \newpage
 
-    \begin{rSubsection}{Universal Field Robots}{Nov 2022 - Feb 2023}{Robotics Engineer Intern}{}
-        \item Programmed ROS2 software for communication with hardware using CAN specification
-        \item Tested systems under development in simulation and on real hardware
-        \item Integrated sensors (quadrature, IMU, LiDAR, radar and GPS) using EKF for sensor fusion
-        \item Liaised with clients in mining automation to identify project direction and requirements
-    \end{rSubsection}
-
-\end{rSection}
-
 %-------------------------------------------------------------------------------
-%	ACADEMICS SECTION
+% TITLE BLOCK (2ND PAGE)
 %-------------------------------------------------------------------------------
-\begin{rSection}{Honors \& Awards} \itemsep -2pt
 
-    \item \textit{2019 - 2023}
-    \begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
-        \item Dean's Commendation for Academic Excellence --- All semesters (10 awards in total)
-    \end{list}
+\SetName{Deren Teo}
+\SetSubtitle{Mechatronics \& Machine Learning Graduate}
+\TitleRule
+\vspace{-6pt} % remove space between TitleRule & top of minipages
 
-    \vspace{1em}
+\hspace{\leftmarginadjust}  % position light grey background effect at the very left margin
+\colorbox{f2f2f2}{
+\begin{minipage}[t][21.5cm]{\leftouterwidth}
 
-    \item \textit{2023}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Les Dobson Memorial Prize for Best Systems \& Software Engineering Project (Honours thesis)
-        \item IEEE Queensland Section Student Thesis Prize --- General Category
-        \item Best Project in Avionics \& UAV (Honours thesis)
-    \end{list}
+  %-----------------------------------------------------------------------------
+  % LEFT-SIDE SECTIONS (SHADED)
+  %-----------------------------------------------------------------------------
 
-    \vspace{1em}
+  \hspace{\leftoutermargin}  % nest another minipage for the content, regularly aligned
+  \begin{minipage}[t][21.5cm]{\leftinnerwidth}
 
-    \item \textit{2022}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Mechatronic System Design Project II (METR4810) trophy
-    \end{list}
+    \raggedright
 
-    \vspace{1em}
+    \vspace{6pt} % compensates for -ve space between TitleRule & top of minipage
 
-    \item \textit{2021}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Shortlisted for L3 Harris Scholarship in Electrical Engineering
-        \item Shortlisted for Rio Tinto Excellence Scholarships and Graduate Program
-    \end{list}
+    % CONTACT SECTION (2ND PAGE) -----------------------------------------------
 
-    \vspace{1em}
+    \begin{section}{Contact}
+      \SetPhone{0490 517 568}
+      \SetEmail{teo.deren@icloud.com}
+      \SetLinkedin{in/derenteo}
+      \SetLocation{Brisbane, AU}
+    \end{section}
 
-    \item \textit{2020}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Hawken Scholar 2020 (top 5\% of undergraduate Engineering cohort)
-        \item Prentice Scholar 2020 (top 5\% of undergraduate Computer Science cohort)
-        \item Shortlisted for Anglo American Metallurgical Coal Engineering Scholarship
-    \end{list}
+    % REFERENCES SECTION -------------------------------------------------------
 
-    \vspace{1em}
+    \begin{section*}{References}
+      \CreateReference{Dr Pauline Pounds}{Mechatronic Engineering Professor \\ -- The University of Queensland}{pauline.pounds@uq.edu.au}
+      \vspace{1em}
+      \CreateReference{Don Sands}{Founder \& CEO -- Synengco}{don.sands@synengco.com}
+    \end{section*}
 
-    \item \textit{2019}
-    \begin{list}{$\cdot$}{\leftmargin=1em}
-        \item Recipient of the Information Communications Technology (ICT) Excellence Scholarship
-    \end{list}
+  \end{minipage}
+\end{minipage}}%
+\hspace{\innerspacing}
+\begin{minipage}[t][21.5cm]{\rightouterwidth}
 
-\end{rSection}
+  %-----------------------------------------------------------------------------
+  % RIGHT-SIDE SECTIONS (UNSHADED)
+  %-----------------------------------------------------------------------------
+
+  \raggedright
+
+  \vspace{6pt} % compensates for -ve space between TitleRule & top of minipage
+
+  % WORK EXPERIENCE SECTION (CONT'D) -------------------------------------------
+
+  \begin{section}{Work Experience}
+
+    \textbf{Student Engineer} \\[8pt]
+
+    \textit{Synengco} \hfill Nov 2019 -- Nov 2023 \\[8pt]
+
+    Highly varied Python software development experiences, ranging from machine learning and data visualisation to code base optimisation.
+
+    \begin{itemize}
+      \item Building and testing Bayesian methods for supply chain modelling and optimisation
+      \item Visualising big data from the monitoring of industrial assets
+      \item Developing software aligned with the Open Industrial Interoperability Ecosystem (OIIE)
+      \item Collaborating with major power generation clients to optimise their code base
+    \end{itemize}
+
+  \end{section}
+
+  % HONOURS & AWARDS SECTION ---------------------------------------------------
+
+  \begin{section*}{Honours \& Awards}
+
+    \textit{2019 -- 2023}
+    \begin{itemize}
+      \item Dean's Commendation for Academic Excellence – All semesters
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2023}
+    \begin{itemize}
+      \item Les Dobson Memorial Prize for Best Systems \& Software Engineering Project (Honours thesis)
+      \item IEEE Queensland Section Student Thesis Prize – General Category
+      \item Best Project in Avionics \& UAV (Honours thesis)
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2022}
+    \begin{itemize}
+      \item Mechatronic System Design Project II (METR4810) trophy
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2020}
+    \begin{itemize}
+      \item Hawken Scholar (top 5\% of undergraduate Engineering cohort)
+      \item Prentice Scholar (top 5\% of undergraduate Computer Science and Information Technology cohort)
+    \end{itemize}
+    \vspace{8pt}
+
+    \textit{2019}
+    \begin{itemize}
+      \item Recipient of the Information Communications Technology (ICT) Excellence Scholarship
+      \item Queensland Certificate of Education (QCE) Distinguished Academic Achiever Award
+    \end{itemize}
+
+  \end{section*}
+
+\end{minipage}
+
+\FooterRule
 
 \end{document}
