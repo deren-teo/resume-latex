@@ -202,8 +202,8 @@
                 \vspace{8pt}
                 \textcolor{7f7f7f}{\textit{#2}} \par    % reference position/title
                 \vspace{8pt}
-                \raisebox{-0.25\height}{\includegraphics[scale=0.7]{static/icon_mail.png}}
-                \hspace{0.2em}
+                \raisebox{-0.27\height}{\includegraphics[scale=0.7]{static/icon_mail.png}}%
+                \hspace{1ex}
                 \textcolor{7f7f7f}{#3}                  % reference email
                 \vspace{8pt}
             \end{minipage}
