@@ -9,8 +9,6 @@
 
 %
 % TODO:
-% - Implement references section
-% - Remove "magic numbers" defining size & position of shaded grey section
 % - Have title block appear by default on each page
 %
 
@@ -29,6 +27,26 @@
 % Custom itemize style for "Work Experience" & "Honours & Awards" sections
 \setitemize{label=\raisebox{0.25ex}{\tiny$\bullet$}, labelsep=1em, leftmargin=*}
 
+% Define proportions of various sections
+
+\newlength{\leftmarginadjust}         % adjust left page margin to position
+\setlength{\leftmarginadjust}{-2cm}   % shaded section closer to the edge
+
+\newlength{\leftouterwidth}           % width of shaded left section
+\setlength{\leftouterwidth}{7.1cm}
+
+\newlength{\leftoutermargin}          % space between left margins of outer and
+\setlength{\leftoutermargin}{1cm}     % inner left sections
+
+\newlength{\leftinnerwidth}           % width of text inside shaded left
+\setlength{\leftinnerwidth}{4.8cm}    % section
+
+\newlength{\innerspacing}             % width between left and right sections
+\setlength{\innerspacing}{0.5cm}
+
+\newlength{\rightouterwidth}
+\setlength{\rightouterwidth}{10.7cm}  % width of unshaded right section
+
 %-------------------------------------------------------------------------------
 % TITLE BLOCK
 %-------------------------------------------------------------------------------
@@ -38,16 +56,16 @@
 \TitleRule
 \vspace{-6pt} % remove space between TitleRule & top of minipages
 
-\hspace{-2cm} % position light grey background effect at the very left margin
+\hspace{\leftmarginadjust}  % position light grey background effect at the very left margin
 \colorbox{f2f2f2}{
-\begin{minipage}[t][23cm]{0.39\textwidth}
+\begin{minipage}[t][23cm]{\leftouterwidth}
 
   %-----------------------------------------------------------------------------
   % LEFT-SIDE SECTIONS (SHADED)
   %-----------------------------------------------------------------------------
 
-  \hspace{1.6cm}  % nest another minipage for the content, regularly aligned
-  \begin{minipage}[t][23cm]{0.64\textwidth}
+  \hspace{\leftoutermargin}  % nest another minipage for the content, regularly aligned
+  \begin{minipage}[t][23cm]{\leftinnerwidth}
 
     \raggedright
 
@@ -60,6 +78,7 @@
       \SetEmail{teo.deren@icloud.com}
       \SetLinkedin{in/derenteo}
       \SetLocation{Brisbane, AU}
+      \vspace{0.4em} % modify vspace to align horizontal divider w/ Profile section
     \end{section}
 
     % EDUCATION SECTION --------------------------------------------------------
@@ -113,8 +132,8 @@
 
   \end{minipage}
 \end{minipage}}%
-\hspace{0.03\textwidth}%
-\begin{minipage}[t][23cm]{0.61\textwidth}
+\hspace{\innerspacing}%
+\begin{minipage}[t][23cm]{\rightouterwidth}
 
   %-----------------------------------------------------------------------------
   % RIGHT-SIDE SECTIONS (UNSHADED)
@@ -127,8 +146,9 @@
   % PROFILE SECTION ------------------------------------------------------------
 
   \begin{section}{Profile}
+    \setlength{\baselineskip}{1.2\baselineskip} % increase line spacing here
     I'm a fresh mechatronics and machine learning graduate with a passion for creating innovative solutions to real-world problems. I'd describe myself as a dedicated lifelong learner, with key skills including Python, C++ and Linux. I believe in consistently pushing boundaries and delivering excellent results, and I'm always looking for opportunities to apply my knowledge in challenging and exciting roles in the robotics and automation industry. \par
-    \vspace{-1pt} % modify spacing to align horizontal divider w/ Contact section
+    \vspace{-1em} % modify vspace to align horizontal divider w/ Contact section
   \end{section}
 
   % WORK EXPERIENCE SECTION ----------------------------------------------------
@@ -190,16 +210,16 @@
 \TitleRule
 \vspace{-6pt} % remove space between TitleRule & top of minipages
 
-\hspace{-2cm} % position light grey background effect at the very left margin
+\hspace{\leftmarginadjust}  % position light grey background effect at the very left margin
 \colorbox{f2f2f2}{
-\begin{minipage}[t][21.5cm]{0.4\textwidth}
+\begin{minipage}[t][21.5cm]{\leftouterwidth}
 
   %-----------------------------------------------------------------------------
   % LEFT-SIDE SECTIONS (SHADED)
   %-----------------------------------------------------------------------------
 
-  \hspace{1.6cm}  % nest another minipage for the content, regularly aligned
-  \begin{minipage}[t][21.5cm]{0.7\textwidth}
+  \hspace{\leftoutermargin}  % nest another minipage for the content, regularly aligned
+  \begin{minipage}[t][21.5cm]{\leftinnerwidth}
 
     \raggedright
 
@@ -224,8 +244,8 @@
 
   \end{minipage}
 \end{minipage}}%
-\hspace{0.06\textwidth}
-\begin{minipage}[t][21.5cm]{0.61\textwidth}
+\hspace{\innerspacing}
+\begin{minipage}[t][21.5cm]{\rightouterwidth}
 
   %-----------------------------------------------------------------------------
   % RIGHT-SIDE SECTIONS (UNSHADED)

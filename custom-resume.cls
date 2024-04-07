@@ -47,7 +47,7 @@
     {
         \centering
         \textcolor{7f7f7f}{
-            \rule{0.92\textwidth}{0.4pt}
+            \rule{0.99\textwidth}{1pt}
         }
         \par
     }
@@ -66,7 +66,7 @@
     {
         \centering
         \textcolor{a6a6a6}{
-            \rule{0.92\textwidth}{0.4pt}
+            \rule{0.99\textwidth}{1pt}
         }
         \par
     }
@@ -187,24 +187,26 @@
 %-------------------------------------------------------------------------------
 
 \newcommand{\CreateReference}[3]{%
-    \hspace{-1.5cm}
-    \colorbox{dfdfdf}{
-    \begin{minipage}[t]{1.2\textwidth}
-        % Nest another minipage to create a "left margin"
-        \hspace{2ex}
-        \begin{minipage}[t]{\textwidth}
-            \raggedright
-            \small
+    \mbox{ % mbox prevents a linebreak caused by below "1.2\textwidth"
+        \hspace{-1cm}
+        \colorbox{dfdfdf}{
+        \begin{minipage}[t]{1.2\textwidth}
+            % Nest another minipage to create a "left margin"
+            \hspace{2ex}
+            \begin{minipage}[t]{\textwidth}
+                \raggedright
+                \small
 
-            \vspace{8pt}
-            \textcolor{7f7f7f}{\textbf{#1}} \par    % reference name
-            \vspace{8pt}
-            \textcolor{7f7f7f}{\textit{#2}} \par    % reference position/title
-            \vspace{8pt}
-            \raisebox{-0.25\height}{\includegraphics[scale=0.7]{static/icon_mail.png}}
-            \hspace{0.2em}
-            \textcolor{7f7f7f}{#3}                  % reference email
-            \vspace{8pt}
-        \end{minipage}
-    \end{minipage}} \par
+                \vspace{8pt}
+                \textcolor{7f7f7f}{\textbf{#1}} \par    % reference name
+                \vspace{8pt}
+                \textcolor{7f7f7f}{\textit{#2}} \par    % reference position/title
+                \vspace{8pt}
+                \raisebox{-0.25\height}{\includegraphics[scale=0.7]{static/icon_mail.png}}
+                \hspace{0.2em}
+                \textcolor{7f7f7f}{#3}                  % reference email
+                \vspace{8pt}
+            \end{minipage}
+        \end{minipage}}
+    } \par
 }
